@@ -33,7 +33,7 @@
     text-rendering: optimizeLegibility;
     
     /*font-family: 'Roboto', sans-serif;*/
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .hiddenElement{
@@ -447,7 +447,7 @@ main{
 .menu{
     position: fixed;
     top:120px; left: 0;
-    width: 100%; height: calc(50% - (120px - 30px));
+    width: 100%; height: calc(100% - (120px + 30px));
     background-color: var(--color-b);
     padding: 10px;
     -webkit-box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.4);
@@ -466,16 +466,19 @@ main{
     position: relative;
     float: left;
     display: inline-block;
-    height: calc(100% - 20px);
+    height: calc(100% - 10px);
     top:0; left: 0;
-    margin: 10px;
+    margin: 5px;
     background-color: var(--color-6);
 }
 
-.menu section:nth-child(1){ width: calc(25% - 20px); 
+.menu section:nth-child(1){
+    width: calc(20% - 10px); 
     overflow-x: auto;
 }
-.menu section:nth-child(2){ width: calc(75% - 20px); }
+.menu section:nth-child(2){ 
+    width: calc(80% - 10px); 
+}
 
 .menu section:nth-child(1) ul{
     list-style: none;
@@ -510,6 +513,7 @@ main{
 
 #buscador-browser{
     height: 50px;
+    background-color: var(--color-1);
 }
 
 #buscador-browser article{
@@ -565,8 +569,6 @@ main{
     width: 20%;
 }
 
-
-
 #buscador-browser article:nth-child(2) span{
     width: 100%; height: 100%;
     position: relative;
@@ -576,6 +578,12 @@ main{
     display: block;
     cursor: pointer;
     color: #fff;
+    
+    -webkit-transition: all ease-in 0.2s;
+    -moz-transition: all ease-in 0.2s;
+    -o-transition: all ease-in 0.2s;
+    -ms-transition: all ease-in 0.2s;
+    transition: all ease-in 0.2s;
 }
 
 #buscador-browser article:nth-child(2) span:hover{
@@ -588,4 +596,96 @@ main{
     top:50%; left: 50%;
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
+}
+
+#paginador-browser{
+    position: relative;
+    top:0; left: 0;
+    width: 100%; height: 50px;
+}
+
+#paginador-browser ul{
+    display: block;
+    position: absolute;
+    list-style: none;
+    width: 400px;
+    height: auto;
+    top:50%; transform: translateX(-50%) translateY(-50%);
+    left: 50%; 
+    vertical-align: middle;
+}
+
+#paginador-browser ul p{
+    /*
+    position: relative;
+    top:50%; left: 50%;
+    transform: translateX(-50%) translateY(-50%);*/
+    font-family: 'Roboto';
+    font-size: 2vh;
+    padding: 2px;
+}
+
+#paginador-browser ul li:not(:nth-child(3)){
+    float: left;
+    width: calc(20% - 10px);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #888;
+    
+    -webkit-transition: all ease-in 0.2s;
+    -moz-transition: all ease-in 0.2s;
+    -o-transition: all ease-in 0.2s;
+    -ms-transition: all ease-in 0.2s;
+    transition: all ease-in 0.2s;
+}
+
+#paginador-browser ul li:not(:nth-child(3)):hover{
+    color: #000;
+}
+
+#paginador-browser ul li:nth-child(3){
+    float: left;
+    width: calc(20% - 10px);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: default;
+    color: #888;
+}
+
+#nomenclatura-browser{
+    position: relative;
+    top:0; left: 0;
+    width: 100%; height: 50px;
+}
+
+#nomenclatura-browser ul{
+    width: 100%; height: 100%;
+    list-style: none;
+}
+
+#nomenclatura-browser ul li{
+    width: 10%;
+    height: 100%;
+    float: left;
+}
+
+#nomenclatura-browser ul li p{
+    position: relative;
+    top:50%; left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 1vw;
+    text-align: center;
+    padding: 10px;
 }

@@ -212,14 +212,27 @@
                     </div>
                     <div id="paginador-browser">
                         <ul>
-                            <li class="icon-cheveron-outline-left"></li>
-                            <li>&lt;</li>
+                            <li class="icon-cheveron-outline-left"><p>Primero</p></li>
+                            <li class="icon-cheveron-outline-left"><p>Anterior</p></li>
                             <li>---</li>
-                            <li>&gt;</li>
-                            <li class="icon-cheveron-outline-right"></li>
+                            <li class="icon-cheveron-outline-right"><p>Siguiente</p></li>
+                            <li class="icon-cheveron-outline-right"><p>Ultimo</p></li>
                         </ul>
                     </div>
-                    <div id="nomenclatura-browser"></div>
+                    <div id="nomenclatura-browser">
+                        <ul>
+                            <li><p>No. Control</p></li>
+                            <li><p>Nombre</p></li>
+                            <li><p>Semestre</p></li>
+                            <li><p>Sexo</p></li>
+                            <li><p>Estatus</p></li>
+                            <li><p>Ver perfil</p></li>
+                            <li><p>Lengua Extrangera</p></li>
+                            <li><p>Actividades Complementarias</p></li>
+                            <li><p>Servicio Social</p></li>
+                            <li><p>Residencias Profesionales</p></li>
+                        </ul>
+                    </div>
                     <div id="resultados-browser"></div>
                 </section>
             </div>
